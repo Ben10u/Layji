@@ -88,10 +88,6 @@ if game.PlaceId == 110829983956014 then
 				local pos = v:GetPivot().Position
 				local dist = (rootPart.Position - pos).Magnitude
 	
-				if eggName == "egg_legendary" then
-					return v
-				end
-	
 				if dist < shortestDistance then
 					shortestDistance = dist
 					closestEgg = v
