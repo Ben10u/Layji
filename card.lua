@@ -1,4 +1,6 @@
-repeat task.wait() until game:IsLoaded()
+if not game:IsLoaded() then 
+	game.Loaded:Wait() 
+end
 
 if game.PlaceId == 110829983956014 then
 	local Players = game:GetService("Players")
