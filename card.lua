@@ -81,20 +81,19 @@ if game.PlaceId == 110829983956014 then
 	local function GetClosestEgg()
 		local closestEgg = nil
 		local shortestDistance = math.huge
-	
+
 		for _, v in pairs(workspace:GetChildren()) do
 			if v:IsA("Model") and v.Name:lower():find("egg") then
-				local eggName = v.Name:lower()
 				local pos = v:GetPivot().Position
 				local dist = (rootPart.Position - pos).Magnitude
-	
+
 				if dist < shortestDistance then
 					shortestDistance = dist
 					closestEgg = v
 				end
 			end
 		end
-	
+
 		return closestEgg
 	end
 
@@ -164,6 +163,12 @@ if game.PlaceId == 110829983956014 then
 					TPReturner()
 				end
 			end)
+		end
+	end
+
+	for _, v in pairs(Players:GetPlayers()) do
+		if v.Name == "Sthai073" then
+			Teleport()
 		end
 	end
 
